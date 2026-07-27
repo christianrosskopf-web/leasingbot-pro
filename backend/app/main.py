@@ -1,9 +1,21 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.services.fahrzeug_service import alle_fahrzeuge, suche_fahrzeuge
 
 app = FastAPI(
     title="LeasingBot API",
     version="0.2.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:5174",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 

@@ -10,7 +10,15 @@ fahrzeuge = [
         laufzeit=36,
         kilometer=10000,
         kraftstoff="Benzin",
-        leistung_ps=150
+        leistung_ps=150,
+        getriebe="Automatik",
+farbe="Grau",
+ausstattung=[
+    "Navigation",
+    "Klimaautomatik",
+    "Assistenzsysteme"
+],
+anbieter="Audi Leasing"
     ),
     Fahrzeug(
         marke="BMW",
@@ -20,7 +28,15 @@ fahrzeuge = [
         laufzeit=48,
         kilometer=15000,
         kraftstoff="Diesel",
-        leistung_ps=163
+        leistung_ps=163,
+        getriebe="Automatik",
+farbe="Schwarz",
+ausstattung=[
+    "LED Licht",
+    "Sitzheizung",
+    "Parkassistent"
+],
+anbieter="BMW Financial Services"
     ),
     Fahrzeug(
         marke="Tesla",
@@ -30,7 +46,15 @@ fahrzeuge = [
         laufzeit=36,
         kilometer=10000,
         kraftstoff="Elektro",
-        leistung_ps=283
+        leistung_ps=283,
+        getriebe="Automatik",
+farbe="Weiß",
+ausstattung=[
+    "Autopilot",
+    "Premium Sound",
+    "Glasdach"
+],
+anbieter="Tesla Leasing"
     )
 ]
 

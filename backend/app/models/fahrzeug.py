@@ -10,3 +10,7 @@ class Fahrzeug(BaseModel):
     kilometer: int
     kraftstoff: str
     leistung_ps: int
+    getriebe: str
+    farbe: str
+    ausstattung: list[str]
+    anbieter: str
