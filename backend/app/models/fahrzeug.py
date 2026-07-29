@@ -14,3 +14,4 @@ class Fahrzeug(BaseModel):
     farbe: str
     ausstattung: list[str]
     anbieter: str
+    bild: str

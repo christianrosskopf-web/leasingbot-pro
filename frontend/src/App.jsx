@@ -87,45 +87,54 @@ function App() {
 
       <div className="cards">
 
-        {fahrzeuge.map((auto, index) => (
+  {fahrzeuge.map((auto, index) => (
 
-          <div className="card" key={index}>
+    <div className="card" key={index}>
 
-            <h2>
-              {auto.marke} {auto.modell}
-            </h2>
+      <img
+        src={auto.bild}
+        alt={`${auto.marke} ${auto.modell}`}
+        className="fahrzeug-bild"
+      />
 
-            <p className="rate">
-  {auto.leasingrate.toLocaleString("de-DE")} € / Monat
-</p>
+      <h2>
+        {auto.marke} {auto.modell}
+      </h2>
 
-<p>
-  🚘 Baujahr: {auto.baujahr}
-</p>
+      <p className="rate">
+        {auto.leasingrate} € / Monat
+      </p>
 
-<p>
-  ⚙️ Leistung: {auto.leistung_ps} PS
-</p>
+      <p>
+        📅 {auto.laufzeit} Monate
+      </p>
 
-<p>
-  📅 Laufzeit: {auto.laufzeit} Monate
-</p>
+      <p>
+        🛣️ {auto.kilometer} km/Jahr
+      </p>
 
-<p>
-  🛣️ Kilometer: {auto.kilometer.toLocaleString("de-DE")} km/Jahr
-</p>
+      <p>
+        ⛽ {auto.kraftstoff}
+      </p>
 
-<p>
-  ⛽ {auto.kraftstoff}
-</p>
-<button onClick={() => setAusgewaehltesFahrzeug(auto)}>
-  Details ansehen
-</button>
-          </div>
+      <p>
+        ⚙️ {auto.getriebe} | 🎨 {auto.farbe}
+      </p>
 
-        ))}
+      <p>
+        🏢 {auto.anbieter}
+      </p>
 
-      </div>
+      <button onClick={() => setAusgewaehltesFahrzeug(auto)}>
+        Details ansehen
+      </button>
+
+    </div>
+
+  ))}
+
+</div>
+
 {ausgewaehltesFahrzeug && (
   <div className="card">
 
@@ -177,16 +186,15 @@ function App() {
     <li key={index}>{punkt}</li>
   ))}
 </ul>
-    <button onClick={() => setAusgewaehltesFahrzeug(null)}>
+         <button onClick={() => setAusgewaehltesFahrzeug(null)}>
       Schließen
     </button>
 
- 
-
   </div>
 )}
+
     </div>
-  );
+    );
 }
 
 export default App;

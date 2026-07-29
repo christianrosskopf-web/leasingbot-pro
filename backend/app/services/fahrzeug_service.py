@@ -16,9 +16,10 @@ farbe="Grau",
 ausstattung=[
     "Navigation",
     "Klimaautomatik",
-    "Assistenzsysteme"
+    "Assistenzsysteme",
 ],
-anbieter="Audi Leasing"
+anbieter="Audi Leasing",
+bild="https://placehold.co/600x400?text=Audi+Q2"
     ),
     Fahrzeug(
         marke="BMW",
@@ -35,8 +36,10 @@ ausstattung=[
     "LED Licht",
     "Sitzheizung",
     "Parkassistent"
+    
 ],
-anbieter="BMW Financial Services"
+anbieter="BMW Financial Services",
+bild="https://placehold.co/600x400?text=BMW+X1"
     ),
     Fahrzeug(
         marke="Tesla",
@@ -54,7 +57,8 @@ ausstattung=[
     "Premium Sound",
     "Glasdach"
 ],
-anbieter="Tesla Leasing"
+anbieter="Tesla Leasing",
+bild="https://placehold.co/600x400?text=Tesla+Model+3"
     )
 ]
 

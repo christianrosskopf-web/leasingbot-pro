@@ -34,6 +34,8 @@ h1 {
 .filterbox button {
   padding: 10px;
   font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
 }
 
 .filterbox button {
@@ -41,32 +43,80 @@ h1 {
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 6px;
 }
 
 .filterbox button:hover {
   background: #163b67;
 }
 
+
+/* Fahrzeugübersicht */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 25px;
 }
+
+
+/* Fahrzeugkarte */
 
 .card {
   background: white;
-  border-radius: 12px;
+  border-radius: 15px;
   padding: 20px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+
+/* Fahrzeugbild */
+
+.fahrzeug-bild {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
 
 .card h2 {
   margin-top: 0;
+  color: #222;
 }
+
+
+.card p {
+  margin: 8px 0;
+  color: #555;
+}
+
 
 .rate {
   font-size: 28px;
   font-weight: bold;
   color: #1f4f8a;
+}
+
+
+/* Buttons */
+
+.card button {
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #1f4f8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #163b67;
 }
