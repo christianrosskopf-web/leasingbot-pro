@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.services.fahrzeug_service import alle_fahrzeuge, suche_fahrzeuge
+from app.services.angebot_service import alle_angebote
 
 app = FastAPI(
     title="LeasingBot API",
@@ -40,3 +41,6 @@ def fahrzeuge(
         kilometer,
         kraftstoff
     )
+@app.get("/angebote")
+def angebote():
+    return alle_angebote()
