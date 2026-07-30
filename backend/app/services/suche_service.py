@@ -7,7 +7,8 @@ def suche_angebote(
     kilometer: int = None,
     kraftstoff: str = None,
     portal: str = None,
-    marke: str = None
+    marke: str = None,
+    sortierung: str = None
 ):
     ergebnis = alle_angebote()
 
@@ -46,5 +47,25 @@ def suche_angebote(
             angebot for angebot in ergebnis
             if angebot.marke.lower() == marke.lower()
         ]
+
+    # Sortierung
+    if sortierung == "preis_auf":
+        ergebnis = sorted(
+            ergebnis,
+            key=lambda x: x.leasingrate
+        )
+
+    elif sortierung == "preis_ab":
+        ergebnis = sorted(
+            ergebnis,
+            key=lambda x: x.leasingrate,
+            reverse=True
+        )
+
+    elif sortierung == "laufzeit":
+        ergebnis = sorted(
+            ergebnis,
+            key=lambda x: x.laufzeit
+        )
 
     return ergebnis

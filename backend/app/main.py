@@ -54,8 +54,18 @@ def suche(
     kilometer: int = None,
     kraftstoff: str = None,
     portal: str = None,
-    marke: str = None
+    marke: str = None,
+    sortierung: str = None
 ):
+    return suche_angebote(
+        max_rate,
+        laufzeit,
+        kilometer,
+        kraftstoff,
+        portal,
+        marke,
+        sortierung
+)
     return suche_angebote(
         max_rate,
         laufzeit,
